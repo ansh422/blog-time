@@ -20,6 +20,12 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Quick-start development settings - unsuitable for production
+SUMMERNOTE_CONFIG = {
+    'codemirror': {
+        'mode': 'htmlmixed',
+        'lineNumbers': 'true',
+    },
+}
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
