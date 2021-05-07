@@ -20,19 +20,13 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Quick-start development settings - unsuitable for production
-SUMMERNOTE_CONFIG = {
-    'codemirror': {
-        'mode': 'htmlmixed',
-        'lineNumbers': 'true',
-    },
-}
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'fm-y&72n#a)&jnfkv+4oqodj!71*su()1!1%!up@!j#l)+n+35'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
