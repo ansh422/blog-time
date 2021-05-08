@@ -109,6 +109,31 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+def summernote_custom_upload_to():
+    return "app/media/" + datetime.datetime.now().strftime("%Y/%m")
+
+SUMMERNOTE_CONFIG = {
+    'prettifyHtml': False,
+    'attachment_upload_to': summernote_custom_upload_to(),
+    'toolbar': [
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['font', ['strikethrough', 'superscript', 'subscript']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol']],
+        ['insert', ['picture', 'video', 'link', 'hr']],
+        ['misc', ['codeview']]
+    ],
+    'css': (
+        '//cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/theme/monokai.min.css',
+    ),
+    'codemirror': {
+        'mode' : 'htmlmixed',
+        'lineWrapping' : True,
+        'lineNumbers': 'true',
+        'theme': 'monokai',
+    },
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
